@@ -4,6 +4,7 @@ FROM tezos/tezos:v11.0
 # Install AWS CLI
 
 USER root
+RUN cat /etc/os-release
 RUN \
     apk -Uuv add groff less python2 py2-pip curl jq && \
     pip install awscli && \
